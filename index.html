@@ -3,81 +3,51 @@
 <html>
 <style>
 body {
-  background-image: url(bg1.png), url(bgnew.gif);
-  background-repeat: repeat-y, repeat;
-  background-position: center, center;
+  background-color: black;
 }
-.aboutbutton, .ytbutton, .tgbutton, .twbutton, .acbutton {
-        transition: all .2s;
-		width: 352px;
-        height: 79px;
-		margin: 10px;
-		display: inline-block; 
-      }
-      .acbutton:hover {
-        filter: drop-shadow(0 0 4px #fff);
-      }
+.enter {
+  height: 366px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -183px 0 0 -303px;
+z-index: 2;
+	transition: all .2s;
+}
+.enter:hover {
+        filter: invert(100%);
+		transition: all .2s;
+}
+.logo {
+ animation: rotation 45s infinite linear;
+  width: 416px;
+  height: 416px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -208px 0 0 -208px;
+  z-index: 1;
+  	transition: all .2s;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
 	  </style>
     <head>
 	<meta charset="utf-8" />
-   <title>NATURALNONSENSE</title>
+   <title>NN-ENTRANCE</title>
     </head>
     <body link="#FFFFFF" vlink="FFEB9B">
-	<font face=Arial color=white>
-   <br>
-   <center>
-   <h1><strong> </strong></h1><img src="logo2.png">
-   <h3>NO SHAPE / NO TASTE</h3>
-	<style type="text/css">
-        .ytbutton {
-            background: url("ytbutton1.png") no-repeat;
-        }
-        .ytbutton:hover {
-            background: url("ytbutton2.png") no-repeat;
-        }
-    </style>
-	<div><a href="https://www.youtube.com/channel/UCAWC1CI72C5IIj1rMb9eczg"><div class="ytbutton"></div></a></div>
-		<style type="text/css">
-        .twbutton {
-            background: url("twbutton1.png") no-repeat;
-        }
-        .twbutton:hover {
-            background: url("twbutton2.png") no-repeat;
-        }
-    </style>
-	<div><a href="https://twitter.com/nat_nonsense"><div class="twbutton"></div></a></div>
-	<style type="text/css">
-        .tgbutton {
-            background: url("tgbutton1.png") no-repeat; 
-        }
-        .tgbutton:hover {
-            background: url("tgbutton2.png") no-repeat;
-        }
-    </style>
-	<div><a href="https://telegram.me/nnnnse"><div class="tgbutton"></div></a></div>
-	<style type="text/css">
-        .acbutton {
-            background: url("acbutton1.png") no-repeat;
-        }
-        .acbutton:hover {
-            background: url("acbutton2.png") no-repeat;
-        }
-    </style>
-	<div><a href="arcade/home.html"><div class="acbutton"></div></a></div>
-	<br>
-	<img src=sw.png>
-	<br>
-	<br>
-	<br>
-	<a href="updates.html">Last updated on November 24th 2020</a>
-	<a href="not_found.html"><p>404? 404!</p></a>
-	<a href="https://naturalnonsense.digital"><IMG src="naturalnonsensedotdigital.gif"></a>
-	<p> Music: "CONTINUE" music from JETでGO! by TAITO
-   </font>
-	<audio loop autoplay>
-	<source src="./bgm112020.mp3">
-	<p>audio unsupported (∩︵∩) </p>
-	</audio>
+	<img src="cross.png" class="logo">
+	<a href="home.html"><img src="enter.png" class="enter"></a>
+	<center>
+	<br><font face=courier color=white>
+	Enable autoplay for audio on this website.
     </body>
 	
 </html>
