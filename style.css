@@ -1,0 +1,35 @@
+body {
+  background-image: url(bg1.png), url(bgnew.gif);
+  background-repeat: repeat-y, repeat;
+  background-position: center, center;
+}
+table, th, td {
+	table-layout: fixed;
+	border: 0px solid white;
+}
+.pic {
+	width: 240px;
+	transition: all .2s;
+}
+.button {
+	width: 50%;
+}
+.logo {
+	width: 525px;
+	transition: all .2s;
+}
+.logo:hover {
+        filter: drop-shadow(0 0 3px #fff);
+		transition: all .2s;
+}
+.pic:hover {
+        filter: drop-shadow(0 0 3px #fff);
+		transition: all .2s;
+}
+.link {
+	transition: all .2s;
+}
+.link:hover {
+        filter: drop-shadow(0 0 3px #fff);
+		transition: all .2s;
+}
