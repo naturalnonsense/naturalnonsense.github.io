@@ -33,3 +33,16 @@ table, th, td {
         filter: drop-shadow(0 0 3px #fff);
 		transition: all .2s;
 }
+audio {
+    filter: invert(100%);
+    width: 240px;
+    height: 25px;
+}
+.potd{
+	transition: all .2s;
+	width: 240px;
+}
+.potd:hover {
+	filter: drop-shadow(0 0 5px #fff);
+	transition: all .2s;
+}
