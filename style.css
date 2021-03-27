@@ -1,48 +1,99 @@
-body {
-  background-image: url(bg1.png), url(bg280121.png);
-  background-repeat: repeat-y, repeat;
-  background-position: center, center;
+body{
+	background-color:black;
+	color:white;
+	overflow: hidden;
+	}
+.container{
+	overflow:hidden;
+	}
+.logo{
+	position:absolute;
+	width: 720px;
+	margin: auto;
+	top: 40%;
+    left: 50%;
+	z-index:2;
+	animation:shift 30s linear infinite;
 }
-table, th, td {
-	table-layout: fixed;
-	border: 0px solid white;
+.buttons{
+	position:absolute;
+	width:720px;
+	margin:auto;
+	top:40%;
+	left:5%;
+	z-index:2;
 }
-.pic {
-	width: 240px;
+.button{
+	height:32px;
 	transition: all .2s;
 }
-.button {
-	width: 50%;
+.cross{
+	position:absolute;
+	width:600px;
+	margin: -300px 0 0 -300px;
+	top: 50%;
+    left: 50%;
+	z-index:1;
+	animation: rotation 120s infinite linear;
 }
-.logo {
-	width: 525px;
-	transition: all .2s;
-}
-.logo:hover {
-        filter: drop-shadow(0 0 3px #fff);
+.stripe1{
+	background:url("strip.png") repeat-x;
+	height:32px;
+	width:5076px;
+	animation:slide 3s linear infinite;
+	perspective: 100px;
+	}
+.stripe2{
+	background:url("strip.png") repeat-x ;
+	height:32px;
+	width:5076px;
+	animation:slide2 3s linear infinite;
+	bottom: 0;
+	position: absolute;
+	}
+.button:hover {
+        filter:drop-shadow(0 0 3px #fff);
 		transition: all .2s;
 }
-.pic:hover {
-        filter: drop-shadow(0 0 3px #fff);
-		transition: all .2s;
+@keyframes slide{
+	0%{
+		transform: translate3d(0,0,0);
+		filter:opacity(50%);
+	}
+	50%{
+		filter:opacity(100%);
+	}
+	100%{
+	transform: translate3d(-40px,0,0);
+	filter:opacity(50%);
+	}
 }
-.link {
-	transition: all .2s;
+@keyframes slide2{
+	0%{
+		transform: translate3d(-40px,0,0);
+		filter:opacity(50%);
+	}
+	50%{
+		filter:opacity(100%);
+	}
+	100%{
+	transform: translate3d(0px,0,0);
+	filter:opacity(50%);
+	}
 }
-.link:hover {
-        filter: drop-shadow(0 0 3px #fff);
-		transition: all .2s;
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }
-audio {
-    filter: invert(100%);
-    width: 240px;
-    height: 25px;
-}
-.potd{
-	transition: all .2s;
-	width: 240px;
-}
-.potd:hover {
-	filter: drop-shadow(0 0 5px #fff);
-	transition: all .2s;
+@keyframes shift{
+	0%{
+		filter:hue-rotate(0deg);
+	}
+	100%{
+		filter:hue-rotate(360deg);
+	}
 }
