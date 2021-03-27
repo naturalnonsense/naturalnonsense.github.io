@@ -6,6 +6,66 @@ body{
 .container{
 	overflow:hidden;
 	}
+/*BRANCH DINGAS ZONE !!!*/
+.scene{
+	position:absolute;
+	top:50%;
+	margin:0 0 0 -450px;
+	left:50%;
+	width: 900px;
+	height: 900px;
+	perspective: 500px;
+}
+.dingas{
+	width:100%;
+	height:10%;
+	position:relative;
+	transform-style: preserve-3d;
+	animation: turn 30s linear infinite;
+}
+.dingas2{
+	width:100%;
+	height:10%;
+	position:relative;
+	transform-style: preserve-3d;
+	animation: turn 20s linear infinite;
+}
+
+.face{
+	position:absolute;
+	padding: 0px;
+	border-radius: 50px;
+	
+	width:100%;
+	height:100%;
+	background: linear-gradient(90deg, #00f2ff, rgba(0, 0, 255, 0));
+    background-size: 100% 100%;
+    -webkit-animation: gradientanim 7s ease infinite;
+    -moz-animation: gradientanim 7s ease infinite;
+    animation: gradientanim 7s ease infinite;
+	opacity:0.5;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	font-family: Arial, sans-serif;
+	font-size:2rem;
+
+}
+.a{transform:translateZ(0px); filter:opacity(40%);animation:shift 19s  infinite;}
+.b {transform: rotateZ(150deg) rotateX(0deg) scaleZ(1);
+filter:opacity(35%);animation:shift 20s  infinite;}
+.c {transform: rotateZ(60deg) rotateY(0deg) scaleX(1);
+filter:opacity(70%);animation:shift 21s  infinite;}
+.d{transform: rotateZ(120deg) rotateY(0deg) scaleX(1);
+filter:opacity(79%);animation:shift 22s  infinite;}
+.e{transform: rotateZ(90deg) rotateX(0deg) scaleX(1);
+filter:opacity(47%);animation:shift 23s  infinite;}
+.f{transform: rotateZ(30deg) rotateX(0deg) scaleZ(1);
+filter:opacity(50%);animation:shift 24s  infinite;}
+
+
+
+
 .logo{
 	position:absolute;
 	width: 720px;
@@ -13,7 +73,7 @@ body{
 	top: 40%;
     left: 50%;
 	z-index:2;
-	animation:shift 30s linear infinite;
+	animation:shift 30s infinite;
 }
 .buttons{
 	position:absolute;
@@ -34,20 +94,30 @@ body{
 	top: 50%;
     left: 50%;
 	z-index:1;
-	animation: rotation 120s infinite linear;
+	animation: rotation linear 10s infinite;
+}
+.cross2{
+	position:absolute;
+	width:600px;
+	margin: -300px 0 0 -300px;
+	top: 50%;
+    left: 50%;
+	z-index:1;
+	animation: rotation linear 10s infinite;
 }
 .stripe1{
 	background:url("strip.png") repeat-x;
 	height:32px;
 	width:5076px;
-	animation:slide 3s linear infinite;
+	animation:slide 2s linear infinite;
 	perspective: 100px;
+	top:0;
 	}
 .stripe2{
 	background:url("strip.png") repeat-x ;
 	height:32px;
 	width:5076px;
-	animation:slide2 3s linear infinite;
+	animation:slide2 2s linear infinite;
 	bottom: 0;
 	position: absolute;
 	}
@@ -82,18 +152,42 @@ body{
 	}
 }
 @keyframes rotation {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-  }
+0% {
+	-webkit-transform:perspective(600) rotate3d(1, .5, 1, 0deg);
+	}
+100%{
+	-webkit-transform:perspective(600) rotate3d(1, .5, 1, 359deg);
+	}
 }
 @keyframes shift{
 	0%{
 		filter:hue-rotate(0deg);
 	}
-	100%{
-		filter:hue-rotate(360deg);
+	50%{
+		filter:hue-rotate(180deg)
 	}
+	100%{
+		filter:hue-rotate(0deg);
+	}
+}
+@keyframes turn {
+  0% { transform: rotate3d(0, 0, 0, 0); scale(1, 1)}
+  50% {transform: rotate3d(1,0.5,0,180deg) scale(2,2);}
+  100% { transform: rotate3d(1, 0.5, 0, 360deg) scale(1, 1);}
+}
+
+@-webkit-keyframes gradientanim {
+    0%{background-position:0% 14%}
+    50%{background-position:100% 87%}
+    100%{background-position:0% 14%}
+}
+@-moz-keyframes gradientanim {
+    0%{background-position:0% 14%}
+    50%{background-position:100% 87%}
+    100%{background-position:0% 14%}
+}
+@keyframes gradientanim {
+    0%{background-position:0% 14%}
+    50%{background-position:100% 87%}
+    100%{background-position:0% 14%}
 }
