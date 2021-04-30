@@ -103,15 +103,18 @@ filter:opacity(50%);animation:shift 21s  infinite;} /*1*/
 	background:url("strip.png") repeat-x;
 	height:32px;
 	width:5076px;
-	animation:slide 2s linear infinite;
-	perspective: 100px;
+	opacity: 75%;
+	animation:slide 2s linear infinite, shift 30s infinite;
 	top:0;
+	position: absolute;
+	z-index:5;
 	}
 .stripe2{
 	background:url("strip.png") repeat-x ;
 	height:32px;
+	opacity: 75%;
 	width:5076px;
-	animation:slide2 2s linear infinite;
+	animation:slide2 2s linear infinite, shift 30s infinite;
 	bottom: 0;
 	position: absolute;
 	}
