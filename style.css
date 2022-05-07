@@ -21,8 +21,8 @@ body{
 	height:10%;
 	position:relative;
 	transform-style: preserve-3d;
-	animation: turn 60s linear infinite;
-
+	animation: turn 20s linear infinite;
+	z-index: auto;
 }
 .dingas2{
 	width:100%;
@@ -30,6 +30,7 @@ body{
 	position:relative;
 	transform-style: preserve-3d;
 	animation: turn 20s linear infinite;
+	z-index: auto;
 }
 
 .face{
@@ -71,6 +72,7 @@ filter:opacity(50%);animation:shift 21s  infinite;} /*1*/
 	position:absolute;
 	width: 720px;
 	margin: auto;
+
 	top: 40%;
     left: 50%;
 	z-index:2;
@@ -89,15 +91,17 @@ filter:opacity(50%);animation:shift 21s  infinite;} /*1*/
 	transition: all .2s;
 }
 .cross{
+	mix-blend-mode: normal;
+	filter: opacity(30%);
 	position:absolute;
-	filter:opacity(0.5);
 	width:600px;
 	margin: -300px 0 0 -300px;
 	top: 50%;
     left: 50%;
-	z-index:1;
+	z-index:2;
 	transform-style: flat;
-	animation: rotation linear 40s infinite;
+	animation: rotation linear 20s infinite;
+	transition: all 2s;
 }
 .stripe1{
 	background:url("strip.png") repeat-x;
@@ -164,12 +168,13 @@ audio {
 	}
 }
 @keyframes rotation {
-0% {
-	-webkit-transform:perspective(600) rotate3d(1, .5, 1, 0deg);
-	}
-100%{
-	-webkit-transform:perspective(600) rotate3d(1, .5, 1, 359deg);
-	}
+0% { -webkit-transform:perspective(600) rotate3d(1, .5, 1, 0deg); }
+24% { -webkit-transform:perspective(600) rotate3d(1, .5, 1, 60deg); }
+25% { -webkit-transform:perspective(600) rotate3d(1, .5, 1, 120deg); }
+50% { -webkit-transform:perspective(600) rotate3d(1, .5, 1, 180deg); }
+74% { -webkit-transform:perspective(600) rotate3d(1, .5, 1, 240deg); }
+75% { -webkit-transform:perspective(600) rotate3d(1, .5, 1, 300deg); }
+100%{ -webkit-transform:perspective(600) rotate3d(1, .5, 1, 360deg); }
 }
 @keyframes shift{
 	0%{
@@ -183,8 +188,12 @@ audio {
 	}
 }
 @keyframes turn {
-  0% { transform: rotate3d(0, 0, 0, 0); scale(1, 1)}
+  0% { transform: rotate3d(0, 0, 0, 0); scale(1, 1);}
+  24% { transform: rotate3d(1, 0.5, 0, 60deg); scale(0.1, 0.1);}
+  25% { transform: rotate3d(1, 0.5, 0, 120deg); scale(2, 2);}
   50% {transform: rotate3d(1,0.5,0,180deg) scale(2,2);}
+  74% { transform: rotate3d(1, 0.5, 0, 240deg); scale(2, 2);}
+  75% { transform: rotate3d(1, 0.5, 0, 300deg); scale(5, 5);}
   100% { transform: rotate3d(1, 0.5, 0, 360deg) scale(1, 1);}
 }
 
