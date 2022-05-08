@@ -101,7 +101,6 @@ filter:opacity(50%);animation:shift 21s  infinite;} /*1*/
 	z-index:2;
 	transform-style: flat;
 	animation: rotation linear 20s infinite;
-	transition: all 2s;
 }
 .stripe1{
 	background:url("strip.png") repeat-x;
