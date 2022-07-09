@@ -90,6 +90,11 @@ filter:opacity(50%);animation:shift 21s  infinite;} /*1*/
 	height:32px;
 	transition: all .2s;
 }
+.savelife{
+	height:32px;
+	transition: all .2s;
+	animation: pulse 1s infinite;
+}
 .cross{
 	mix-blend-mode: normal;
 	filter: opacity(30%);
@@ -174,6 +179,20 @@ audio {
 74% { -webkit-transform:perspective(600) rotate3d(1, .5, 1, 240deg); }
 75% { -webkit-transform:perspective(600) rotate3d(1, .5, 1, 300deg); }
 100%{ -webkit-transform:perspective(600) rotate3d(1, .5, 1, 360deg); }
+}
+@keyframes pulse {
+0%{
+	transform: scale(1.1)
+}
+25%{;
+	transform: scale(1)
+}
+26%{
+	transform: scale(1.05)
+}
+99%{
+	transform: scale(1)
+}
 }
 @keyframes shift{
 	0%{
