@@ -53,17 +53,17 @@ body{
 	font-size:2rem;
 
 }
-.a{transform:translateZ(0px); filter:opacity(40%);animation:shift 20s  infinite;}/*0*/
+.a{transform:translateZ(0px); filter:opacity(40%);animation:shift 30s  infinite;}/*0*/
 .b {transform: rotateZ(150deg) rotateX(0deg) scaleZ(1);
-filter:opacity(35%);animation:shift 25s  infinite;} /*6*/
+filter:opacity(35%);animation:shift 30s  infinite;} /*6*/
 .c {transform: rotateZ(60deg) rotateY(0deg) scaleX(1);
-filter:opacity(70%);animation:shift 22s  infinite;} /*2*/
+filter:opacity(70%);animation:shift 30s  infinite;} /*2*/
 .d{transform: rotateZ(120deg) rotateY(0deg) scaleX(1);
-filter:opacity(79%);animation:shift 24s  infinite;} /*5*/
+filter:opacity(79%);animation:shift 30s  infinite;} /*5*/
 .e{transform: rotateZ(90deg) rotateX(0deg) scaleX(1);
-filter:opacity(47%);animation:shift 23s  infinite;} /*4*/
+filter:opacity(47%);animation:shift 30s  infinite;} /*4*/
 .f{transform: rotateZ(30deg) rotateX(0deg) scaleZ(1);
-filter:opacity(50%);animation:shift 21s  infinite;} /*1*/
+filter:opacity(50%);animation:shift 30s  infinite;} /*1*/
 
 
 
