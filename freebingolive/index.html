@@ -1,0 +1,41 @@
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FREEBINGOLIVE.COM BINGO ONLINE</title>
+</head>
+<iframe class="vid" width="800" height="600" src="https://www.youtube.com/embed/J-vJql_eYWI?rel=0&autoplay=1" title="Leon mentions Bingo in Resident Evil 4 Remake., BINGO ONLINE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<body>
+    <div class="container" id="textContainer"></div>
+    <script>
+        function createText() {
+            const container = document.getElementById("textContainer");
+            const textElement = document.createElement("div");
+            textElement.className = "text";
+            textElement.textContent = "FreeBingoLive.com";
+            textElement.style.top = Math.random() * 100 + "vh";
+            textElement.style.left = "100vw";
+            let speed = Math.random() * 3 + 3;
+            textElement.style.animation = `scrollText ${speed}s linear`;
+            textElement.style.zIndex = Math.floor(speed * 10);
+            textElement.style.fontSize = (speed * 10) + "px";
+            
+            // Ensure animation doesn't override hover effect
+            textElement.addEventListener("mouseover", () => {
+                textElement.style.animationPlayState = "paused";
+                textElement.style.scale = 1.2;
+            });
+            textElement.addEventListener("mouseout", () => {
+                textElement.style.animationPlayState = "running";
+            });
+            
+            container.appendChild(textElement);
+            
+            textElement.addEventListener("animationend", () => {
+                textElement.remove();
+            });
+        }
+        setInterval(createText, 100);
+    </script>
+</body>
+</html>
